@@ -1,0 +1,39 @@
+	Qsys_vhd u0 (
+		.clk_clk_clk                (<connected-to-clk_clk_clk>),                //   clk_clk.clk
+		.flash_tcm_address_out      (<connected-to-flash_tcm_address_out>),      //     flash.tcm_address_out
+		.flash_tcm_read_n_out       (<connected-to-flash_tcm_read_n_out>),       //          .tcm_read_n_out
+		.flash_tcm_write_n_out      (<connected-to-flash_tcm_write_n_out>),      //          .tcm_write_n_out
+		.flash_tcm_data_out         (<connected-to-flash_tcm_data_out>),         //          .tcm_data_out
+		.flash_tcm_chipselect_n_out (<connected-to-flash_tcm_chipselect_n_out>), //          .tcm_chipselect_n_out
+		.led_export                 (<connected-to-led_export>),                 //       led.export
+		.pll_arst_export            (<connected-to-pll_arst_export>),            //  pll_arst.export
+		.pll_lock_export            (<connected-to-pll_lock_export>),            //  pll_lock.export
+		.pll_pdone_export           (<connected-to-pll_pdone_export>),           // pll_pdone.export
+		.rst_rst_reset_n            (<connected-to-rst_rst_reset_n>),            //   rst_rst.reset_n
+		.sdram_addr                 (<connected-to-sdram_addr>),                 //     sdram.addr
+		.sdram_ba                   (<connected-to-sdram_ba>),                   //          .ba
+		.sdram_cas_n                (<connected-to-sdram_cas_n>),                //          .cas_n
+		.sdram_cke                  (<connected-to-sdram_cke>),                  //          .cke
+		.sdram_cs_n                 (<connected-to-sdram_cs_n>),                 //          .cs_n
+		.sdram_dq                   (<connected-to-sdram_dq>),                   //          .dq
+		.sdram_dqm                  (<connected-to-sdram_dqm>),                  //          .dqm
+		.sdram_ras_n                (<connected-to-sdram_ras_n>),                //          .ras_n
+		.sdram_we_n                 (<connected-to-sdram_we_n>),                 //          .we_n
+		.sdram_clk_clk              (<connected-to-sdram_clk_clk>),              // sdram_clk.clk
+		.sram_DQ                    (<connected-to-sram_DQ>),                    //      sram.DQ
+		.sram_ADDR                  (<connected-to-sram_ADDR>),                  //          .ADDR
+		.sram_UB_n                  (<connected-to-sram_UB_n>),                  //          .UB_n
+		.sram_LB_n                  (<connected-to-sram_LB_n>),                  //          .LB_n
+		.sram_WE_n                  (<connected-to-sram_WE_n>),                  //          .WE_n
+		.sram_CE_n                  (<connected-to-sram_CE_n>),                  //          .CE_n
+		.sram_OE_n                  (<connected-to-sram_OE_n>),                  //          .OE_n
+		.uart_rxd                   (<connected-to-uart_rxd>),                   //      uart.rxd
+		.uart_txd                   (<connected-to-uart_txd>),                   //          .txd
+		.uart_cts_n                 (<connected-to-uart_cts_n>),                 //          .cts_n
+		.uart_rts_n                 (<connected-to-uart_rts_n>),                 //          .rts_n
+		.epcs_dclk                  (<connected-to-epcs_dclk>),                  //      epcs.dclk
+		.epcs_sce                   (<connected-to-epcs_sce>),                   //          .sce
+		.epcs_sdo                   (<connected-to-epcs_sdo>),                   //          .sdo
+		.epcs_data0                 (<connected-to-epcs_data0>)                  //          .data0
+	);
+

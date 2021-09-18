@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="207" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="373" />
+   <description preferredWidth="277" />
+   <export preferredWidth="210" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions/Configuration and Programming,Library/Memory Interfaces and Controllers/Flash,Library/Memory Interfaces and Controllers,Project,Library/University Program/Memory,Library/Basic Functions/On Chip Memory,Library/University Program,Library/Basic Functions,Library" />
+ <window width="1920" height="851" x="-456" y="191" />
+ <generation path="_PROJECT_NAME_" block_symbol_file="0" synthesis="VHDL" />
+</preferences>

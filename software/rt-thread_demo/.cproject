@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<buildSystem id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754">
+			<storageModule id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754" moduleId="org.eclipse.cdt.core.settings"/>
+		</buildSystem>
+		<cconfiguration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754">
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="rt-thread_demo" buildProperties="" description="" id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754" name="Nios II" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754." name="/" resourcePath="">
+						<toolChain id="altera.nios2.mingw.gcc4.1097727162" name="MinGW Nios II GCC4" superClass="altera.nios2.mingw.gcc4">
+							<targetPlatform id="altera.nios2.mingw.gcc4.101072647" name="Nios II" superClass="altera.nios2.mingw.gcc4"/>
+							<builder buildPath="${workspace_loc://rt-thread_demo}" id="altera.tool.gnu.builder.mingw.220150633" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="altera.tool.gnu.builder.mingw"/>
+							<tool id="altera.tool.gnu.c.compiler.mingw.372426517" name="Nios II GCC C Compiler" superClass="altera.tool.gnu.c.compiler.mingw">
+								<option id="gnu.c.compiler.option.include.paths.776471651" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.442478263" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="altera.tool.gnu.cpp.compiler.mingw.1081969725" name="Nios II GCC C++ Compiler" superClass="altera.tool.gnu.cpp.compiler.mingw">
+								<option id="gnu.cpp.compiler.option.include.paths.619751019" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1904427978" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="altera.tool.gnu.archiver.mingw.121903659" name="Nios II GCC Archiver" superClass="altera.tool.gnu.archiver.mingw"/>
+							<tool id="altera.tool.gnu.c.linker.mingw.2099755777" name="Nios II GCC C Linker" superClass="altera.tool.gnu.c.linker.mingw"/>
+							<tool id="altera.tool.gnu.assembler.mingw.1038283028" name="Nios II GCC Assembler" superClass="altera.tool.gnu.assembler.mingw">
+								<option id="gnu.both.asm.option.include.paths.1116171233" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1631284601" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754" moduleId="org.eclipse.cdt.core.settings" name="Nios II">
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/rt-thread_demo/rt-thread/include"/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="rt-thread_demo.null.1562465029" name="rt-thread_demo"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754.;altera.tool.gnu.c.compiler.mingw.372426517;cdt.managedbuild.tool.gnu.c.compiler.input.442478263">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.2116909754.;altera.tool.gnu.cpp.compiler.mingw.1081969725;cdt.managedbuild.tool.gnu.cpp.compiler.input.1904427978">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="mem_init_install" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>mem_init_install</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="mem_init_generate" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>mem_init_generate</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="help" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>help</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Nios II">
+			<resource resourceType="PROJECT" workspacePath="/rt-thread_demo"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+</cproject>

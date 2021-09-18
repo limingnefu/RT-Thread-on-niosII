@@ -1,0 +1,43 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Qsys_vhd.cpu -pg 1 -lvl 5 -y 230
+preplace inst Qsys_vhd -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Qsys_vhd.flash_generic_tristate_controller.tdt -pg 1
+preplace inst Qsys_vhd.flash_generic_tristate_controller.reset -pg 1
+preplace inst Qsys_vhd.RS232 -pg 1 -lvl 6 -y 420
+preplace inst Qsys_vhd.clk_bridge -pg 1 -lvl 1 -y 280
+preplace inst Qsys_vhd.timer -pg 1 -lvl 7 -y 210
+preplace inst Qsys_vhd.sdram -pg 1 -lvl 7 -y 410
+preplace inst Qsys_vhd.led -pg 1 -lvl 7 -y 690
+preplace inst Qsys_vhd.flash_generic_tristate_controller -pg 1 -lvl 6 -y 170
+preplace inst Qsys_vhd.sram -pg 1 -lvl 7 -y 510
+preplace inst Qsys_vhd.jtag_uart -pg 1 -lvl 6 -y 280
+preplace inst Qsys_vhd.cpu.clock_bridge -pg 1
+preplace inst Qsys_vhd.flash_tristate_conduit_bridge -pg 1 -lvl 7 -y 110
+preplace inst Qsys_vhd.flash_generic_tristate_controller.tda -pg 1
+preplace inst Qsys_vhd.cpu.reset_bridge -pg 1
+preplace inst Qsys_vhd.reset_bridge -pg 1 -lvl 1 -y 360
+preplace inst Qsys_vhd.flash_generic_tristate_controller.clk -pg 1
+preplace inst Qsys_vhd.flash_generic_tristate_controller.slave_translator -pg 1
+preplace inst Qsys_vhd.system_id -pg 1 -lvl 7 -y 610
+preplace inst Qsys_vhd.pll -pg 1 -lvl 4 -y 50
+preplace inst Qsys_vhd.cpu.cpu -pg 1
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.sram,(SLAVE)sram.conduit_end) 1 0 7 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.rst_rst,(SLAVE)reset_bridge.in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys_vhd</net_container>(MASTER)flash_generic_tristate_controller.tcm,(SLAVE)flash_tristate_conduit_bridge.tcs) 1 6 1 2000
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.pll_arst,(SLAVE)pll.areset_conduit) 1 0 4 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.led,(SLAVE)led.external_connection) 1 0 7 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc INTERCONNECT<net_container>Qsys_vhd</net_container>(MASTER)cpu.debug_reset_request,(SLAVE)sram.clock_reset_reset,(SLAVE)cpu.reset,(MASTER)reset_bridge.out_reset,(SLAVE)jtag_uart.reset,(SLAVE)system_id.reset,(SLAVE)flash_tristate_conduit_bridge.reset,(SLAVE)flash_generic_tristate_controller.reset,(SLAVE)timer.reset,(SLAVE)RS232.reset,(SLAVE)led.reset,(SLAVE)pll.inclk_interface_reset,(SLAVE)sdram.reset) 1 1 6 NJ 370 NJ 370 760 300 1260 370 1720 390 2080
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.uart,(SLAVE)RS232.external_connection) 1 0 6 NJ 350 NJ 350 NJ 350 NJ 350 NJ 450 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)pll.phasedone_conduit,(SLAVE)Qsys_vhd.pll_pdone) 1 0 4 NJ 130 NJ 130 NJ 130 NJ
+preplace netloc INTERCONNECT<net_container>Qsys_vhd</net_container>(SLAVE)sram.avalon_slave,(SLAVE)cpu.debug_mem_slave,(SLAVE)led.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)timer.s1,(SLAVE)sdram.s1,(SLAVE)pll.pll_slave,(SLAVE)flash_generic_tristate_controller.uas,(SLAVE)RS232.s1,(MASTER)cpu.data_master,(MASTER)cpu.instruction_master,(SLAVE)system_id.control_slave) 1 3 4 780 200 1260 190 1700 410 2020
+preplace netloc FAN_OUT<net_container>Qsys_vhd</net_container>(MASTER)cpu.irq,(SLAVE)timer.irq,(SLAVE)RS232.irq,(SLAVE)jtag_uart.irq) 1 5 2 1740 270 NJ
+preplace netloc FAN_OUT<net_container>Qsys_vhd</net_container>(MASTER)clk_bridge.out_clk,(SLAVE)reset_bridge.clk,(SLAVE)pll.inclk_interface) 1 0 4 100 330 260 290 NJ 290 720
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.sdram,(SLAVE)sdram.wire) 1 0 7 NJ 550 NJ 550 NJ 550 NJ 550 NJ 550 NJ 550 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)pll.locked_conduit,(SLAVE)Qsys_vhd.pll_lock) 1 0 4 NJ 110 NJ 110 NJ 110 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(MASTER)Qsys_vhd.sdram_clk,(MASTER)pll.c1) 1 4 4 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)flash_tristate_conduit_bridge.out,(SLAVE)Qsys_vhd.flash) 1 0 7 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ
+preplace netloc EXPORT<net_container>Qsys_vhd</net_container>(SLAVE)Qsys_vhd.clk_clk,(SLAVE)clk_bridge.in_clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Qsys_vhd</net_container>(SLAVE)jtag_uart.clk,(SLAVE)RS232.clk,(MASTER)pll.c0,(SLAVE)flash_tristate_conduit_bridge.clk,(SLAVE)system_id.clk,(SLAVE)flash_generic_tristate_controller.clk,(SLAVE)timer.clk,(SLAVE)sdram.clk,(SLAVE)led.clk,(SLAVE)cpu.clk,(SLAVE)sram.clock_reset) 1 4 3 1240 170 1760 130 2060
+levelinfo -pg 1 0 70 2390
+levelinfo -hier Qsys_vhd 80 130 340 680 1050 1460 1850 2150 2300
