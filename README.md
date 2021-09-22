@@ -23,13 +23,19 @@
 
 2. 编译烧录FPGA固件
    1. 使用Quartus编译quartus工程
-   2. 使用Quartus II Programmer通过USB-Blaster烧录FPGA固件
+   2. 使用Quartus II Programmer通过USB-Blaster 烧录FPGA固件
 
-3. 编译Nios固件
+3. 编译Nios程序
    1. 使用Nios Software Build Tools for Eclipse 生成bsp
-   2. 使用Nios Software Build Tools for Eclipse编译demo工程
+   2. 使用Nios Software Build Tools for Eclipse 编译demo工程
 
-4. 烧录Nios固件
+4. 连接开发板与上位机
+   使用串口-USB连接线进行连接,使用任意串口工具,波特率设置115200
+
+4. 运行/调试Nios程序
+   此时应看到串口工具输出运行信息且板载LED闪烁。
+
+5. 烧录Nios程序
    ​由于DE2-115使用了第三方SPI flash芯片作为EPCS配置芯片，因此需要使用override模式进行Nios固件的烧录  
    1. 将USB-Blaster以JTAG模式连接到开发板
    2. 找到quartus安装目录下的Nios2eds文件夹并运行Nios II Command Shell
@@ -109,35 +115,35 @@
       默认参数,可选配MMU
    - Interval Timer
       命名为"timer",周期设置1ms,64位计数器,作为硬件定时器,产生Systick
-   - RAM(On-Chip Memory/sdram/sram等)
+   - RAM(On-Chip Memory/sdram等)
       本项目调用altera_avalon_new_sdram_controller sdram接口IP  
-      选用外扩sdram,设置大小为64*16MB.其他选项选择足够大小即可.
+      选用外扩sdram,设置大小为64\*16MB.其他选项选择足够大小即可.
    - FLASH(epcs/Serial Flash/Paraller Flash等)/ROM(On-Chip Memory)
       本项目使用EPCS作为程序存储器,并调用altera_generic_tristate_controller和  
       altera_tristate_conduit_bridge来使用扩展的8MB 并行FLASH 来作为后续文件系统基础.
    - UART (RS-232 Serial Port)
-      命名为"uart",作为RT-Thread的console设备
+      命名为"uart",默认波特率115200,作为RT-Thread的console设备
    - PIO(Parallel I/O)
       命名为"led",位宽为17,对应板载17个红色led,作为运行指示灯
    - JTAG UART
-      作为
    - System ID Peripheral
       Qsys系统ID
 2. 构建基本的Nios项目
    FILE->NEW->Nios II Application and BSP from Template  
    选择Quartus工程根目录下的sopcinfo文件,模板为默认的Hello World即可.  
    对项目进行编译,不应出现错误或警告.
-3. 根据移植指南"[基本内核工程 for Nios II](https://oss-club.rt-thread.org/uploads/414_2240f3f77da1b42b5da127d2515c17cb.pdf)"为工程添加 RT-Thread 的内核源文件
+3. 根据移植指南"[基本内核工程 for Nios II](https://oss-club.rt-thread.org/uploads/414_2240f3f77da1b42b5da127d2515c17cb.pdf)" 为工程添加 RT-Thread 的内核源文件
    1. 添加内核文件:
       ```
       rt-thread            目录文件列表
       ├─include            RT-Thread 头文件目录
+      │  rtdbg.h
+      │  rtdebug.h
       │  rtdef.h
       │  rthw.h
       │  rtm.h
+      │  rtservice.h
       │  rtthread.h
-      |  rtdbg.h
-      |  rtservice.h
       ├─libcpu             存放与 CPU 内核有关的文件的目录
       │  └─nios
       │     └─nios_ii
@@ -154,16 +160,12 @@
          kservice.c
          mem.c
          mempool.c
-         module.c
-         module.h
          object.c
-         rtm.c
          scheduler.c
          SConscript
          slab.c
          thread.c
          timer.c
-      注：rt-thread/src/中module.c、module.h并未找到,不用添加
       ```
    2. 添加 BSP 及用户应用程序源文件
       ```
@@ -172,12 +174,11 @@
         └─nios_ii
             application.c
             board.c
-            startup.c
-            uart.c
             board.h
             rtconfig.h
+            startup.c
+            uart.c
             Uart.h
-      注：rt-thread/bsp/nios_ii中sopc.h并未找到,不用添加
       ```
    3. 添加头文件搜索路径
       菜单栏：Projects->Properites->Nios II Application Properites->Nios II Application Paths.  
@@ -185,11 +186,11 @@
          1. rt-thread/bsp/nios_ii
          2. rt-thread/include
    4. 注释rt-thread/bsp/nios_ii/rtconfig.h第81行的#define RT_USING_FINSH
-   5. 编译并下载,自此已完成RT-Thread在Nios_ii的的基本移植
+   5. 编译并下载,至此已完成RT-Thread在Nios_ii的的基本移植
 ## 常见问题说明
-   1. 定时器周期不可太小，否则将无法下载Nios固件
+   1. 定时器周期不可太小，否则将无法正常下载Nios固件和运行调试
    2. 内核移植过程与"[基本内核工程 for Nios II](https://oss-club.rt-thread.org/uploads/414_2240f3f77da1b42b5da127d2515c17cb.pdf)"有出入，以本文档为准
-   3. 若使用EPCS或者其他的并行flahs则不需要在命令行进行Nios固件烧录，直接在GUI界面进行烧录即可
+   3. 若使用标准的EPCS或者其他的并行flash则不需要在命令行进行Nios固件烧录，直接在GUI界面进行烧录即可
 ## 说明信息
 1. 更新历史
    
